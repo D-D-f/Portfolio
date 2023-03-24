@@ -1,0 +1,85 @@
+.Header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color: #222f3e;
+  color: #c8d6e5;
+  font-size: 20px;
+  position: relative;
+}
+
+.header_nav {
+  width: 50%;
+}
+
+.header_nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.header_nav ul li {
+  cursor: pointer;
+}
+
+.burger {
+  display: none;
+  width: 42px;
+  height: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  right: 0px;
+  transform: translateY(-50%);
+}
+
+.burger span {
+  width: 100%;
+  height: 4px;
+  background-color: #c8d6e5;
+  display: block;
+  position: absolute;
+  top: 50%;
+  transition: background-color 0.5s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.burger span::before,
+.burger span::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: #c8d6e5;
+  transition: transform 0.5s ease-in-out;
+}
+
+.burger span::after {
+  transform: translateY(10px);
+}
+
+.burger span::before {
+  transform: translateY(-10px);
+}
+
+.burger.active span::after {
+  transform: translateY(0px) rotateZ(-45deg);
+}
+
+.burger.active span::before {
+  transform: translateY(0px) rotateZ(45deg);
+}
+
+.burger.active span {
+  background-color: transparent;
+}
+
+@media screen and (max-width: 900px) {
+  .burger {
+    display: block;
+  }
+  .Header {
+  }
+}
