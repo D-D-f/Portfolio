@@ -5,3 +5,14 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+html,
+body,
+.root,
+.App {
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
