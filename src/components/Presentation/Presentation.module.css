@@ -1,0 +1,19 @@
+.Presentation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.apropos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.imageProfil {
+  width: 30%;
+}
+
+.textePresentation {
+  width: 70%;
+  text-align: justify;
+}

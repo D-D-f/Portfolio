@@ -13,7 +13,11 @@ const Header = () => {
   return (
     <>
       <header className={classes.Header}>
-        <div className="logo">LOGO</div>
+        <div className="logo">
+          <h1>Développeur Web</h1>
+          <span className={classes.logo}>DDf</span>
+        </div>
+
         <nav className={classes.header_nav}>
           <ListeNav />
         </nav>
