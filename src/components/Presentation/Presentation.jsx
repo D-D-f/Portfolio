@@ -25,6 +25,7 @@ const Presentation = () => {
                 paddingLeft: "5px",
                 fontWeight: "bold",
                 color: "var(--primaryColor)",
+                zIndex: "1",
               }}
             >
               <Typewriter
