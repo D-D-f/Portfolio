@@ -1,19 +1,36 @@
 .Presentation {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.5em;
+  background-color: #111;
+  color: white;
+  height: 95vh;
+  padding: 20px;
+  flex: 1;
 }
 
 .apropos {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  height: 100%;
+  font-size: 1.5em;
+  font-family: "Ubuntu", sans-serif;
 }
 
-.imageProfil {
-  width: 30%;
+.image {
+  width: 50%;
 }
 
-.textePresentation {
-  width: 70%;
-  text-align: justify;
+.image img {
+  width: 100%;
+  border: 5px solid var(--primaryColor);
+  border-radius: 50%;
+}
+
+.langages {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2em;
 }

@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Ubuntu:wght@500&display=swap");
+:root {
+  --primaryColor: rgb(245, 205, 121);
+}
 
 * {
   padding: 0;
@@ -8,19 +11,16 @@
 
 html,
 body,
-.root,
+#root,
 .App {
   height: 100%;
+}
+
+.App {
+  background-color: #111;
 }
 
 body {
   background-color: #f2f4f6;
   overflow-x: hidden;
-}
-
-.container {
-  width: 80%;
-  margin: auto;
-  padding: 20px 0px;
-  font-family: "Josefin Sans", sans-serif;
 }

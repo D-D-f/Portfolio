@@ -1,6 +1,5 @@
 import { useState } from "react";
 import classes from "./Header.module.css";
-import Themes from "./Themes/Themes";
 import ListeNav from "./ListeNav/ListeNav";
 
 const Header = () => {
@@ -21,9 +20,6 @@ const Header = () => {
         <nav className={classes.header_nav}>
           <ListeNav />
         </nav>
-        <div className={`${classes.themes} ${burger ? classes.active : ""}`}>
-          <Themes />
-        </div>
         <div
           onClick={burgerHandler}
           className={`${classes.burger} ${burger ? classes.active : ""}`}
@@ -33,9 +29,6 @@ const Header = () => {
       </header>
       <div className={`${classes.headband} ${burger ? classes.active : ""}`}>
         <ListeNav />
-        <div className={classes.themes_headband}>
-          <Themes />
-        </div>
       </div>
     </>
   );
