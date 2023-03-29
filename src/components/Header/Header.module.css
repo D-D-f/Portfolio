@@ -1,155 +1,160 @@
 .Header {
-  z-index: 1;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 20px;
-  font-size: 20px;
-  position: relative;
-  color: white;
-  height: 5vh;
+  flex-direction: column;
+  height: 100vh;
+  width: 20%;
 }
 
 .Header h1 {
-  display: none;
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9em;
+  font-weight: 300;
+  text-align: center;
 }
 
-.logo {
-  border: 1px solid white;
-  padding: 10px;
-  font-family: "Pacifico", cursive;
-  border-radius: 10px;
-  cursor: pointer;
+.name {
+  color: white;
+  font-weight: bold;
+  margin-top: 1em;
+  margin-bottom: 0.3em;
 }
 
-.logo:hover {
-  background-color: var(--primaryColor);
-  border: 1px solid #111;
-  color: #111;
+.myImg {
+  width: 50%;
+}
+.Header_img {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--secondary--bg);
+  padding: 2em;
 }
 
-.header_nav {
+.skills {
+  background-color: var(--bg-skills);
+  padding: 1em;
+}
+
+ul {
+  list-style: none;
+  width: 100%;
+}
+
+.Header ul li {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  padding: 0.3em 0;
+  font-size: 0.8em;
+}
+
+.profil {
+  color: var(--color-text);
+}
+
+.separator {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border: 0.5px solid var(--color-text);
+}
+
+.experience {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+}
+
+.exp {
+  width: 100%;
+  height: 1px;
+  margin-top: 1em;
+}
+
+.exp {
+  background-color: black;
+}
+
+.html,
+.css,
+.js,
+.php,
+.react {
+  border: 1px solid var(--border-color);
+}
+
+.html {
+  width: 90%;
+}
+
+.css {
+  width: 80%;
+}
+
+.js {
+  width: 75%;
+}
+
+.react {
   width: 50%;
 }
 
-.header_nav ul {
+.php {
+  width: 60%;
+}
+
+.langage {
   display: flex;
   justify-content: space-between;
-  list-style: none;
-  font-family: "Josefin Sans", sans-serif;
 }
 
-.header_nav ul li {
-  cursor: pointer;
-  color: inherit;
-  background: linear-gradient(
-      to top,
-      rgb(245, 205, 121) 3%,
-      rgb(245, 205, 121) 2px,
-      transparent 5px
-    )
-    no-repeat;
-  background-size: 0 100%;
-  transition: background-size 0.3s;
-}
-
-.header_nav ul li:hover {
-  background-size: 100% 100%;
-}
-.burger {
-  display: none;
-  width: 42px;
-  height: 24px;
-  cursor: pointer;
-  position: absolute;
-  top: 45%;
-  right: 0px;
-  transform: translateY(-50%);
-  z-index: 2;
-}
-
-.burger span {
-  width: 100%;
-  height: 4px;
-  background-color: white;
-  display: block;
-  position: absolute;
-  top: 50%;
-  transition: background-color 0.5s ease-in-out;
-  transform: translateX(-50%);
-}
-
-.burger span::before,
-.burger span::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  background-color: white;
-  transition: transform 0.5s ease-in-out;
-  z-index: 2;
-}
-
-.burger span::after {
-  transform: translateY(10px);
-}
-
-.burger span::before {
-  transform: translateY(-10px);
-}
-
-.burger.active span::after {
-  transform: translateY(0px) rotateZ(-45deg);
-}
-
-.burger.active span::before {
-  transform: translateY(0px) rotateZ(45deg);
-}
-
-.burger.active span {
-  background-color: transparent;
-}
-
-.headband {
-  position: absolute;
-  top: 0px;
-  right: 0px;
+.langage strong {
   display: flex;
-  flex-direction: column;
-  color: white;
-  transform: translateX(100%);
-  transition: transform 0.5s ease-in-out;
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 20px;
-  padding: 50px;
-  height: 100%;
-  background-color: #111;
-  z-index: 2;
+  align-items: center;
 }
 
-@media screen and (max-width: 900px) {
-  .Header {
-    justify-content: space-between;
-  }
-  .burger {
-    display: block;
-  }
-  .header_nav,
-  .themes {
-    display: none;
-  }
-  .headband.active {
-    transform: translateX(0%);
-  }
-  .headband ul {
-    list-style: none;
-  }
-  .headband ul li {
-    padding: 10px;
-    cursor: pointer;
-  }
-  .themes_headband {
-    padding: 50px;
-    font-size: 30px;
-  }
+.langage div {
+  font-weight: normal;
+}
+
+.Header .otherSkills li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.iconSkills {
+  color: var(--border-color);
+  margin-right: 0.5em;
+}
+
+.cv {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1em;
+  color: var(--color-text);
+  background-color: var(--secondary--bg);
+}
+
+.iconLangage {
+  font-size: 1.5em;
+  margin-left: 0.4em;
+  color: var(--color-text);
+}
+
+.containerCv {
+  padding: 1em;
+  flex: 1;
 }
