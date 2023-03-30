@@ -5,6 +5,12 @@
   width: 20%;
 }
 
+.myImg {
+  width: 100px;
+  height: 200px;
+  border-radius: 10px;
+}
+
 .Header h1 {
   color: var(--color-text);
   display: flex;
@@ -86,26 +92,6 @@ ul {
   border: 1px solid var(--border-color);
 }
 
-.html {
-  width: 90%;
-}
-
-.css {
-  width: 80%;
-}
-
-.js {
-  width: 75%;
-}
-
-.react {
-  width: 50%;
-}
-
-.php {
-  width: 60%;
-}
-
 .langage {
   display: flex;
   justify-content: space-between;
@@ -120,12 +106,33 @@ ul {
   font-weight: normal;
 }
 
-.Header .otherSkills li {
+.Header .otherSkills li,
+.Header .Allpage li {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   font-weight: 500;
   color: var(--color-text);
+}
+
+.Header .Allpage li {
+  cursor: pointer;
+  font-size: 1em;
+  padding: 1em 0;
+}
+
+.Header .Allpage a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.Header .Allpage li:hover {
+  background-color: var(--border-color);
+  border-radius: 10px;
+}
+
+.iconPage {
+  margin-right: 1em;
 }
 
 .iconSkills {
@@ -140,12 +147,17 @@ ul {
   font-size: 0.8em;
 }
 
+.cv:hover {
+  color: white;
+}
+
 .contact {
   display: flex;
   justify-content: space-evenly;
   padding: 1em;
   color: var(--color-text);
   background-color: var(--secondary--bg);
+  font-size: 1.5em;
 }
 
 .iconLangage {
@@ -157,4 +169,13 @@ ul {
 .containerCv {
   padding: 1em;
   flex: 1;
+}
+
+.iconContact:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.containerDiscord {
+  position: relative;
 }

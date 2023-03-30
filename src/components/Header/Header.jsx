@@ -11,42 +11,48 @@ import {
   FaJs,
   FaReact,
   FaPhp,
+  FaAddressCard,
+  FaCode,
+  FaNewspaper,
 } from "react-icons/fa";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import Info from "../Info/Info";
 import Skill from "./Skill/Skill";
 
 const Header = () => {
+  const [open, setOpen] = useState(false);
   const skill = [
     {
       lang: "HTML 5",
       lvl: "90%",
       icon: <FaHtml5 className={classes.iconLangage} />,
-      exp: "2 ans d'expérience",
     },
     {
       lang: "CSS 3",
       lvl: "80%",
       icon: <FaCss3 className={classes.iconLangage} />,
-      exp: "2 ans d'expérience",
     },
     {
       lang: "JavaScript",
       lvl: "70%",
       icon: <FaJs className={classes.iconLangage} />,
-      exp: "2 ans d'expérience",
     },
     {
       lang: "React JS",
       lvl: "50%",
       icon: <FaReact className={classes.iconLangage} />,
-      exp: "6 mois d'expérience",
     },
     {
       lang: "PHP",
       lvl: "60%",
       icon: <FaPhp className={classes.iconLangage} />,
-      exp: "6 mois d'expérience",
     },
   ];
+
+  const openClickHandler = () => {
+    setOpen(!open);
+  };
 
   const displaySkill = skill.map((item, id) => {
     return (
@@ -54,7 +60,7 @@ const Header = () => {
         key={id}
         langage={item.lang}
         icon={item.icon}
-        xp={item.exp}
+        xp={item.lvl}
         lvl={item.lvl}
       />
     );
@@ -65,7 +71,7 @@ const Header = () => {
       <div className={classes.Header_img}>
         <img
           className={classes.myImg}
-          src="./src/assets/img/pp.png"
+          src="./src/assets/img/pp.jpg"
           alt="ma photo profil de mon portfolio de développeur web"
         />
         <h1>
@@ -88,6 +94,26 @@ const Header = () => {
           </li>
         </ul>
         <hr className={classes.separator} />
+        <div className={classes.page}>
+          <ul className={classes.Allpage}>
+            <Link to="/">
+              <li>
+                <FaAddressCard className={classes.iconPage} /> À propos
+              </li>
+            </Link>
+            <Link to="/projet">
+              <li>
+                <FaCode className={classes.iconPage} /> Projets
+              </li>
+            </Link>
+            <Link to="/blog">
+              <li>
+                <FaNewspaper className={classes.iconPage} /> Blog
+              </li>
+            </Link>
+          </ul>
+        </div>
+        <hr className={classes.separator} />
         <ul>{displaySkill}</ul>
         <hr className={classes.separator} />
         <ul className={classes.otherSkills}>
@@ -109,17 +135,23 @@ const Header = () => {
       <div className={classes.containerCv}>
         <a
           className={classes.cv}
-          href="./src/assets/cv_ddf.pdf"
+          href="./src/assets/img/cv_ddf.pdf"
           download="Télécharger CV"
         >
           Télécharger mon CV <FaDownload />
         </a>
       </div>
       <div className={classes.contact}>
-        <FaLinkedin />
-        <FaEnvelope />
-        <FaGithub />
-        <FaDiscord />
+        <FaLinkedin className={classes.iconContact} />
+        <FaEnvelope className={classes.iconContact} />
+        <FaGithub className={classes.iconContact} />
+        <div className={classes.containerDiscord}>
+          {open && <Info contact="DDf#7720" />}
+          <FaDiscord
+            onClick={openClickHandler}
+            className={classes.iconContact}
+          />
+        </div>
       </div>
     </header>
   );
