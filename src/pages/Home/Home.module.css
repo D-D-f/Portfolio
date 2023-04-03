@@ -1,0 +1,25 @@
+.iconNav {
+  width: 18px;
+  height: 18px;
+  margin-right: 0.2em;
+}
+
+.container {
+  flex: 4;
+}
+
+.container nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.container nav ul li {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.pages {
+  height: 100%;
+}

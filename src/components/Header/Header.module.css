@@ -6,6 +6,10 @@ header ul,
   align-items: center;
 }
 
+header {
+  padding-bottom: 1em;
+}
+
 header ul {
   list-style: none;
 }

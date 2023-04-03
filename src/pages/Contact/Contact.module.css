@@ -1,0 +1,12 @@
+ul {
+  list-style: none;
+}
+
+.contact_li li {
+  padding-left: 1em;
+}
+
+.contact_li li a {
+  text-decoration: none;
+  color: inherit;
+}

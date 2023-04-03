@@ -1,0 +1,14 @@
+.nav ul {
+  list-style: none;
+}
+
+.iconNav {
+  width: 18px;
+  height: 18px;
+  margin-right: 0.2em;
+}
+
+.nav ul li {
+  display: flex;
+  align-items: center;
+}
