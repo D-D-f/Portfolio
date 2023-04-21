@@ -1,0 +1,18 @@
+.input {
+  border: none;
+  outline: none;
+  margin-left: 5px;
+  background-color: inherit;
+}
+
+.terminal {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  border: 1px solid red;
+  overflow: auto;
+}
+
+.champ {
+  display: flex;
+}
