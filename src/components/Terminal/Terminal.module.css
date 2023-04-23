@@ -9,11 +9,10 @@
 .terminal {
   display: flex;
   flex-direction: column;
-  height: 300px;
-  border: 1px solid red;
+  height: 200px;
   overflow: auto;
 }
 
-.champ {
+.Fields {
   display: flex;
 }

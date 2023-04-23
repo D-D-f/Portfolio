@@ -1,0 +1,16 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.explorer,
+.terminal {
+  width: 20px;
+  height: 20px;
+  border: 1px solid red;
+}
+
+.components {
+  display: flex;
+}

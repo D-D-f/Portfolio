@@ -1,42 +1,12 @@
 import React, { useState } from "react";
 import { v4 as uuid } from "uuid";
 import classes from "./Terminal.module.css";
-
-const Help = () => {
-  return (
-    <ul>
-      <li>
-        Voici la liste des commandes
-        <ul>
-          <li>presentation</li>
-        </ul>
-      </li>
-    </ul>
-  );
-};
-
-const Presentation = () => {
-  return <p>Je suis david de freitas</p>;
-};
-
-const Champ = ({ handleKeyPress, placeholder = "" }) => {
-  return (
-    <div className={classes.champ}>
-      <p>ddf - portfolio</p>
-      <input
-        className={classes.input}
-        type="text"
-        onKeyPress={handleKeyPress}
-        placeholder={placeholder}
-        autoFocus
-      />
-    </div>
-  );
-};
+import Fields from "../Fields/Fields";
+import Presentation from "../Presentation/Presentation";
+import Help from "../Help/Help";
 
 const Terminal = () => {
   const [history, setHistory] = useState([]);
-
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
       if (
@@ -51,12 +21,12 @@ const Terminal = () => {
       }
     }
   };
-  console.log(history);
+
   return (
     <div className={classes.terminal}>
-      <Champ
+      <Fields
         handleKeyPress={handleKeyPress}
-        placeholder="Pour voir les commandes disponible taper help et entrer"
+        placeholder="Pour voir les commandes disponible tapez help et entrer"
       />
       {history.map((item, i) => {
         return (
@@ -66,7 +36,7 @@ const Terminal = () => {
             ) : (
               <Presentation key={item.id} />
             )}
-            <Champ key={`champ_${i}`} handleKeyPress={handleKeyPress} />
+            <Fields key={`champ_${i}`} handleKeyPress={handleKeyPress} />
           </React.Fragment>
         );
       })}
