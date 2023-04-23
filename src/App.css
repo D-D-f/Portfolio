@@ -3,3 +3,33 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+html,
+body,
+#root,
+.App,
+.container {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.explorer {
+  display: flex;
+  height: 100%;
+}
+
+.pages {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}

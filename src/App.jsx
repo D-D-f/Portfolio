@@ -8,9 +8,16 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <Terminal />
-      <SideBar />
-      <Explorer />
+      <div className="container">
+        <div className="explorer">
+          <SideBar />
+          <Explorer />
+        </div>
+        <div className="pages">
+          <main>MAIN</main>
+          <Terminal />
+        </div>
+      </div>
     </div>
   );
 };

@@ -1,0 +1,10 @@
+.aside,
+.aside_icon,
+.aside_sideBar {
+  display: flex;
+  flex-direction: column;
+}
+
+.aside {
+  justify-content: space-between;
+}

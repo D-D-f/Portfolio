@@ -1,5 +1,9 @@
+import classes from "./ImgIcon.module.css";
+
 const ImgIcon = ({ icon, alt }) => {
-  return <img src={icon} alt={alt} />;
+  return (
+    <img className={classes.icon} src={`./src/assets/icon/${icon}`} alt={alt} />
+  );
 };
 
 export default ImgIcon;
