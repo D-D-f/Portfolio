@@ -4,16 +4,30 @@
   outline: none;
   margin-left: 5px;
   background-color: inherit;
+  color: inherit;
 }
 
 .terminal {
   display: flex;
   flex-direction: column;
   height: 200px;
-  overflow: auto;
   width: 100%;
+}
+
+.container_terminal {
+  overflow: auto;
 }
 
 .Fields {
   display: flex;
+}
+
+.header_terminal {
+  display: flex;
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.header_terminal li {
+  margin-right: 10px;
 }

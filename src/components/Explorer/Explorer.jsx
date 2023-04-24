@@ -2,7 +2,8 @@ import classes from "./Explorer.module.css";
 
 const Explorer = () => {
   return (
-    <nav>
+    <nav className={classes.nav}>
+      <p>EXPLORER</p>
       <ul className={classes.navPage}>
         <li>
           <img

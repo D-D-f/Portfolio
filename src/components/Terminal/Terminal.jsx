@@ -24,22 +24,33 @@ const Terminal = () => {
 
   return (
     <div className={classes.terminal}>
-      <Fields
-        handleKeyPress={handleKeyPress}
-        placeholder="Pour voir les commandes disponible tapez help et entrer"
-      />
-      {history.map((item, i) => {
-        return (
-          <React.Fragment key={item.id}>
-            {item.value === "help" ? (
-              <Help key={item.id} />
-            ) : (
-              <Presentation key={item.id} />
-            )}
-            <Fields key={`champ_${i}`} handleKeyPress={handleKeyPress} />
-          </React.Fragment>
-        );
-      })}
+      <ul className={classes.header_terminal}>
+        <li>PROBLEMS</li>
+        <li>OUTPUT</li>
+        <li>DEBUG CONSOLE</li>
+        <li style={{ borderBottom: "1px solid red", paddingBottom: "5px" }}>
+          TERMINAL
+        </li>
+        <li>GITLENS</li>
+      </ul>
+      <div className={classes.container_terminal}>
+        <Fields
+          handleKeyPress={handleKeyPress}
+          placeholder="Pour voir les commandes disponible tapez help et entrer"
+        />
+        {history.map((item, i) => {
+          return (
+            <React.Fragment key={item.id}>
+              {item.value === "help" ? (
+                <Help key={item.id} />
+              ) : (
+                <Presentation key={item.id} />
+              )}
+              <Fields key={`champ_${i}`} handleKeyPress={handleKeyPress} />
+            </React.Fragment>
+          );
+        })}
+      </div>
     </div>
   );
 };

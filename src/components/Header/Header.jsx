@@ -2,8 +2,9 @@ import classes from "./Header.module.css";
 import styled from "styled-components";
 
 const ButtonStyled = styled.button({
-  width: "20px",
-  height: "20px",
+  width: "15px",
+  height: "15px",
+  marginLeft: "5px",
   borderRadius: "10px",
   border: "none",
   backgroundColor: (props) => {
