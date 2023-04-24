@@ -5,6 +5,7 @@ import Explorer from "./components/Explorer/Explorer";
 import SideBar from "./components/SideBar/SideBar";
 import Nav from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
+import AllRoutes from "./routes/AllRoutes";
 
 const App = () => {
   return (
@@ -17,7 +18,9 @@ const App = () => {
         </div>
         <div className="pages">
           <Nav />
-          <div></div>
+          <div className="container_pages">
+            <AllRoutes />
+          </div>
           <Terminal />
         </div>
       </main>

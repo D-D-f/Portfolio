@@ -35,3 +35,17 @@ body,
   width: 100%;
   padding: 0px 20px;
 }
+
+.container_pages {
+  height: 100%;
+  padding: 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+li a {
+  text-decoration: none;
+  color: inherit;
+}
