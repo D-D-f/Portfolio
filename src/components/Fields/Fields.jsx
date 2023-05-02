@@ -2,16 +2,18 @@ import classes from "../Terminal/Terminal.module.css";
 
 const Fields = ({ handleKeyPress, placeholder = "" }) => {
   return (
-    <div style={{ fontFamily: "JetBrains Mono" }} className={classes.Fields}>
+    <div className={classes.Fields}>
       <p>
-        <span>➜</span> @user_david-portfolio:
+        <span style={{ color: "#05BFDB" }}>➜</span>{" "}
+        <span style={{ color: "#088395" }}>@user_david</span>
+        <span>-</span>
+        <span style={{ color: "#EA5455" }}>portfolio</span>
+        <span>:</span>
       </p>
       <input
-        style={{ fontFamily: "JetBrains Mono" }}
         className={classes.input}
         type="text"
         onKeyPress={handleKeyPress}
-        placeholder={placeholder}
         autoFocus
       />
     </div>

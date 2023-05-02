@@ -20,6 +20,7 @@
 
 .Fields {
   display: flex;
+  font-family: "JetBrains Mono";
 }
 
 .header_terminal {
@@ -30,4 +31,10 @@
 
 .header_terminal li {
   margin-right: 10px;
+}
+
+.notification {
+  position: absolute;
+  right: 10px;
+  bottom: 50px;
 }

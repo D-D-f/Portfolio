@@ -1,6 +1,19 @@
 .Carousel {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: max-content;
-  height: max-content;
-  border: 1px solid red;
+  height: 100%;
+}
+
+.arrow img {
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.img {
+  width: 200px;
+  height: 100%;
 }

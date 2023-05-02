@@ -3,7 +3,6 @@
   flex-direction: column;
   justify-content: space-between;
   border-radius: 10px;
-  padding: 20px;
 }
 
 .allLangage {
@@ -18,4 +17,22 @@
 .link_link {
   height: 20px;
   width: 20px;
+}
+
+.img {
+  height: 50%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  padding: 20px;
+}
+
+.txt h2 {
+  font-size: 15px;
 }

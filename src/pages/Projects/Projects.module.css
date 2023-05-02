@@ -7,7 +7,7 @@
 }
 
 .containerCard > * {
-  width: 350px;
-  height: 200px;
-  border: 1px solid yellow;
+  width: 250px;
+  height: 300px;
+  border: 1px solid gray;
 }

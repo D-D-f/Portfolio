@@ -3,6 +3,7 @@ import { v4 as uuid } from "uuid";
 import classes from "./Terminal.module.css";
 import Fields from "../Fields/Fields";
 import Presentation from "../Presentation/Presentation";
+import Notification from "../Notification/Notification";
 import Help from "../Help/Help";
 
 const Terminal = () => {
@@ -34,10 +35,7 @@ const Terminal = () => {
         <li>GITLENS</li>
       </ul>
       <div className={classes.container_terminal}>
-        <Fields
-          handleKeyPress={handleKeyPress}
-          placeholder="Pour voir les commandes disponible tapez help et entrer"
-        />
+        <Fields handleKeyPress={handleKeyPress} />
         {history.map((item, i) => {
           return (
             <React.Fragment key={item.id}>
@@ -50,6 +48,9 @@ const Terminal = () => {
             </React.Fragment>
           );
         })}
+      </div>
+      <div className={classes.notification}>
+        <Notification message="Pour connaître les commandes du terminal taper help et entrer" />
       </div>
     </div>
   );
