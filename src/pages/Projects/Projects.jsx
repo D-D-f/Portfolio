@@ -34,7 +34,7 @@ const Projects = () => {
     );
   });
 
-  return <section>{displayProjects}</section>;
+  return <section className={classes.containerCard}>{displayProjects}</section>;
 };
 
 export default Projects;

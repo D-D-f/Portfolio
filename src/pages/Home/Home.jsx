@@ -3,7 +3,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 const Home = () => {
   return (
-    <div className={classes.Home}>
+    <section className={classes.Home}>
       <p>Hello, moi c'est David !</p>
       <p>
         Je suis Développeur{" "}
@@ -17,7 +17,7 @@ const Home = () => {
           delaySpeed={1000}
         />
       </p>
-    </div>
+    </section>
   );
 };
 

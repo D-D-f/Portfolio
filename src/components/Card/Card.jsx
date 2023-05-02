@@ -7,10 +7,21 @@ const Card = ({ img, title, langage, github }) => {
   });
   return (
     <div className={classes.Card}>
-      <img src={img} alt="" />
+      <img src={img} alt="image site" />
       <h2>{title}</h2>
-      <p>Github: {github}</p>
-      <p style={{ display: "flex" }}>{allLangages}</p>
+      <div className={classes.link}>
+        <a className={classes.link_github} href={github}>
+          <img src="./src/assets/icon/github_icon.svg" alt="logo github" />
+        </a>
+        <a className={classes.link_github} href="">
+          <img
+            className={classes.link_link}
+            src="./src/assets/icon/link_icon.svg"
+            alt="logo link"
+          />
+        </a>
+      </div>
+      <p className={classes.allLangage}>{allLangages}</p>
     </div>
   );
 };

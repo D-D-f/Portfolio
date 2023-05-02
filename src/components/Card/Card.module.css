@@ -1,4 +1,21 @@
 .Card {
-  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border-radius: 10px;
+  padding: 20px;
+}
+
+.allLangage {
+  display: flex;
+  gap: 10px;
+}
+
+.link_github {
+  width: max-content;
+}
+
+.link_link {
+  height: 20px;
+  width: 20px;
 }

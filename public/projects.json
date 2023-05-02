@@ -1,7 +1,10 @@
 {
   "projects": [
     {
-      "img": "",
+      "img": [
+        "./src/assets/img/portfolio_sophieBruel.png",
+        "./src/assets/img/portfolio_sophieBruel2.png"
+      ],
       "title": "Portfolio Sophie Bruel",
       "langage": ["JavaScript", "HTML5", "CSS3"],
       "github": "https://github.com/D-D-f/porfolio_sophie_bruel"
