@@ -1,13 +1,12 @@
 .containerCard {
   display: flex;
-  align-items: center;
   gap: 20px;
   flex-wrap: wrap;
-  height: max-content;
+  height: 100%;
 }
 
 .containerCard > * {
   width: 250px;
-  height: 300px;
+  height: 250px;
   border: 1px solid gray;
 }

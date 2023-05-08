@@ -1,4 +1,5 @@
 import classes from "./Explorer.module.css";
+import { Link } from "react-router-dom";
 
 const Explorer = () => {
   return (
@@ -6,44 +7,44 @@ const Explorer = () => {
       <p>EXPLORER</p>
       <ul className={classes.navPage}>
         <li>
-          <img
-            className={classes.icon}
-            src="./src/assets/icon/react.svg"
-            alt="icone react"
-          />
-          home.jsx
+          <Link to="/">
+            <img
+              className={classes.icon}
+              src="./src/assets/icon/react.svg"
+              alt="icone react"
+            />
+            home.jsx
+          </Link>
         </li>
         <li>
-          <img
-            className={classes.icon}
-            src="./src/assets/icon/html_icon.svg"
-            alt="icone html"
-          />
-          about.html
+          <Link to="/about">
+            <img
+              className={classes.icon}
+              src="./src/assets/icon/html_icon.svg"
+              alt="icone html"
+            />
+            about.html
+          </Link>
         </li>
         <li>
-          <img
-            className={classes.icon}
-            src="./src/assets/icon/css_icon.svg"
-            alt="icone css"
-          />
-          contact.css
+          <Link to="/contact">
+            <img
+              className={classes.icon}
+              src="./src/assets/icon/css_icon.svg"
+              alt="icone css"
+            />
+            contact.css
+          </Link>
         </li>
         <li>
-          <img
-            className={classes.icon}
-            src="./src/assets/icon/js_icon.svg"
-            alt="icone javascript"
-          />
-          projects.jsx
-        </li>
-        <li>
-          <img
-            className={classes.icon}
-            src="./src/assets/icon/markdown_icon.svg"
-            alt="icone markdown"
-          />
-          github.md
+          <Link to="/projects">
+            <img
+              className={classes.icon}
+              src="./src/assets/icon/js_icon.svg"
+              alt="icone javascript"
+            />
+            projects.js
+          </Link>
         </li>
       </ul>
     </nav>

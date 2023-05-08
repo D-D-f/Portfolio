@@ -7,13 +7,19 @@ const Contact = () => {
         <li>.socials {"{"} </li>
         <ul className={classes.ul_contact}>
           <li>
-            email: <a href="">daviddefreitas0192@gmail.com</a>
+            email:
+            <a href="mailto:daviddefreitas0192@gmail.com">
+              daviddefreitas0192@gmail.com
+            </a>
           </li>
           <li>
-            linkedin: <a href="">David de Freitas</a>
+            linkedin:{" "}
+            <a href="https://www.linkedin.com/in/david-de-freitas-a85467206/">
+              David de Freitas
+            </a>
           </li>
           <li>
-            github: <a href="">d-d-f</a>
+            github: <a href="https://github.com/D-D-f">D-D-f</a>
           </li>
         </ul>
         <li>{"}"}</li>

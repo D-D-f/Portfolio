@@ -6,31 +6,31 @@
         "./src/assets/img/portfolio_sophieBruel2.png"
       ],
       "title": "Portfolio Sophie Bruel",
-      "langage": ["JavaScript", "HTML5", "CSS3"],
+      "langage": ["javascript", "html5", "css3"],
       "github": "https://github.com/D-D-f/porfolio_sophie_bruel"
     },
     {
       "img": "",
       "title": "Blog",
-      "langage": ["HTML5", "CSS3", "PHP"],
+      "langage": ["html5", "css3", "php"],
       "github": "https://github.com/D-D-f/Blog"
     },
     {
       "img": "",
       "title": "Argent Bank",
-      "langage": ["React JS", "CSS3"],
+      "langage": ["react js", "css3"],
       "github": "https://github.com/D-D-f/argentBank"
     },
     {
       "img": "",
       "title": "Pendu Pokemon",
-      "langage": ["HTML5", "CSS3", "JavaScript"],
+      "langage": ["html5", "css3", "javascript"],
       "github": "https://github.com/D-D-f/pendu_pokemon"
     },
     {
       "img": "",
       "title": "Kasa",
-      "langage": ["React JS", "CSS3"],
+      "langage": ["react js", "css3"],
       "github": "https://github.com/D-D-f/kasa"
     }
   ]

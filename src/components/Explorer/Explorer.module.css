@@ -8,7 +8,13 @@
   padding: 0 30px;
 }
 
-.navPage li {
+.navPage li a {
   display: flex;
   margin-top: 5px;
+}
+
+@media screen and (max-width: 910px) {
+  .nav {
+    display: none;
+  }
 }

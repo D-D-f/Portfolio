@@ -2,7 +2,7 @@ const Help = () => {
   return (
     <ul>
       <li>
-        Voici la liste des commandes
+        Voici la liste des commandes :
         <ul>
           <li>presentation</li>
         </ul>

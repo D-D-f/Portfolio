@@ -50,7 +50,7 @@ const Terminal = () => {
         })}
       </div>
       <div className={classes.notification}>
-        <Notification message="Pour connaître les commandes du terminal taper help et entrer" />
+        <Notification message="Pour connaître les commandes du terminal tapez help puis appuyer sur la touche entrer" />
       </div>
     </div>
   );

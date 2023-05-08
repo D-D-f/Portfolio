@@ -5,9 +5,25 @@
 
 .nav_main ul li {
   padding: 3px 40px;
-  border-right: 1px solid white;
+}
+
+.nav_main ul li a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav_main ul li a img {
+  width: 20px;
+  height: 20px;
 }
 
 .nav_main ul li:hover {
   cursor: pointer;
+}
+
+@media screen and (max-width: 910px) {
+  .nav_main {
+    display: none;
+  }
 }

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
+
   useEffect(() => {
     const getProjects = async () => {
       try {
