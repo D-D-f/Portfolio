@@ -9,7 +9,7 @@ const Nav = () => {
           <Link to="/">
             <img
               className={classes.icon}
-              src="./src/assets/icon/react.svg"
+              src="./public/assets/icon/react.svg"
               alt="icone react"
             />
             home.jsx
@@ -19,7 +19,7 @@ const Nav = () => {
           <Link to="/about">
             <img
               className={classes.icon}
-              src="./src/assets/icon/html_icon.svg"
+              src="./public/assets/icon/html_icon.svg"
               alt="icone html"
             />
             about.html
@@ -29,7 +29,7 @@ const Nav = () => {
           <Link to="/contact">
             <img
               className={classes.icon}
-              src="./src/assets/icon/css_icon.svg"
+              src="./public/assets/icon/css_icon.svg"
               alt="icone css"
             />
             contact.css
@@ -39,7 +39,7 @@ const Nav = () => {
           <Link to="/projects">
             <img
               className={classes.icon}
-              src="./src/assets/icon/js_icon.svg"
+              src="./public/assets/icon/js_icon.svg"
               alt="icone javascript"
             />
             projects.js

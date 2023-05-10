@@ -2,7 +2,11 @@ import classes from "./ImgIcon.module.css";
 
 const ImgIcon = ({ icon, alt }) => {
   return (
-    <img className={classes.icon} src={`./src/assets/icon/${icon}`} alt={alt} />
+    <img
+      className={classes.icon}
+      src={`./public/assets/icon/${icon}`}
+      alt={alt}
+    />
   );
 };
 
