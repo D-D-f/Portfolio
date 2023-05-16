@@ -3,6 +3,7 @@ import classes from "./Projects.module.css";
 import { useState, useEffect } from "react";
 
 const Projects = () => {
+  const [search, setSearch] = useState("");
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
@@ -23,19 +24,37 @@ const Projects = () => {
     getProjects();
   }, []);
 
-  const displayProjects = projects?.projects?.map((project, id) => {
+  const getSearch = (e) => {
+    setSearch(e.currentTarget.value);
+  };
+
+  const filterObject = (valueUser) => {
+    return projects?.projects?.filter((objet) => {
+      return objet.langage.some((mot) => {
+        return mot.startsWith(valueUser);
+      });
+    });
+  };
+
+  const newArrayFilter = filterObject(search);
+  const displayProjects = newArrayFilter?.map((item, id) => {
     return (
       <Card
         key={id}
-        img={project.img}
-        title={project.title}
-        langage={project.langage}
-        github={project.github}
+        img={item.img}
+        title={item.title}
+        langage={item.langage}
+        github={item.github}
       />
     );
   });
 
-  return <section className={classes.containerCard}>{displayProjects}</section>;
+  return (
+    <section className={classes.containerCard}>
+      <input type="text" onChange={(e) => getSearch(e)} />
+      {displayProjects}
+    </section>
+  );
 };
 
 export default Projects;
