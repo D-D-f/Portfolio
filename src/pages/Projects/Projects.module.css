@@ -6,7 +6,26 @@
 }
 
 .containerCard > * {
+  position: relative;
   width: 250px;
   height: 300px;
   border: 1px solid gray;
+  margin-top: 50px;
+}
+
+.filtreInput {
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+  position: absolute;
+  right: 30px;
+  height: 30px;
+  width: 300px;
+}
+
+.filtreInput input {
+  color: white;
+  background-color: inherit;
+  outline: none;
+  border: none;
 }
