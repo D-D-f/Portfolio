@@ -31,7 +31,7 @@ const Projects = () => {
   const filterObject = (valueUser) => {
     return projects?.projects?.filter((objet) => {
       return objet.langage.some((mot) => {
-        return mot.startsWith(valueUser);
+        return mot.startsWith(valueUser.toLowerCase());
       });
     });
   };
