@@ -6,12 +6,19 @@ export const ThemeContext = createContext();
 const ThemeContextProvider = (props) => {
   const allThemes = {
     ayu: {
-      background: "black",
-      color: "white",
+      background: "#212733",
+      color: "#B3B454",
+      border: "#FFCF9D",
     },
     dracula: {
-      background: "white",
-      color: "red",
+      background: "#282a36",
+      color: "#f1fa8c",
+      border: "#bd93f9",
+    },
+    nord: {
+      background: "#2e3440",
+      color: "#a3be8c",
+      border: "#5e81ac",
     },
   };
 
