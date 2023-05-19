@@ -10,7 +10,7 @@ const Explorer = () => {
           <Link to="/">
             <img
               className={classes.icon}
-              src="./public/assets/icon/react.svg"
+              src="./assets/icon/react.svg"
               alt="icone react"
             />
             home.jsx
@@ -20,7 +20,7 @@ const Explorer = () => {
           <Link to="/about">
             <img
               className={classes.icon}
-              src="./public/assets/icon/html_icon.svg"
+              src="./assets/icon/html_icon.svg"
               alt="icone html"
             />
             about.html
@@ -30,7 +30,7 @@ const Explorer = () => {
           <Link to="/contact">
             <img
               className={classes.icon}
-              src="./public/assets/icon/css_icon.svg"
+              src="./assets/icon/css_icon.svg"
               alt="icone css"
             />
             contact.css
@@ -40,7 +40,7 @@ const Explorer = () => {
           <Link to="/projects">
             <img
               className={classes.icon}
-              src="./public/assets/icon/js_icon.svg"
+              src="./assets/icon/js_icon.svg"
               alt="icone javascript"
             />
             projects.js

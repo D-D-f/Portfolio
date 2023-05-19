@@ -9,7 +9,7 @@ const Projects = () => {
   useEffect(() => {
     const getProjects = async () => {
       try {
-        const getData = await fetch("./public/projects.json", {
+        const getData = await fetch("./projects.json", {
           method: "GET",
         });
 
@@ -57,7 +57,7 @@ const Projects = () => {
         <span style={{ fontSize: "10px" }}>
           {newArrayFilter?.length === 0
             ? "No results"
-            : `Projects trouvé : ${newArrayFilter?.length}`}
+            : `Projets trouvé : ${newArrayFilter?.length}`}
         </span>
       </div>
 
