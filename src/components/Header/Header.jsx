@@ -1,5 +1,7 @@
 import classes from "./Header.module.css";
 import styled from "styled-components";
+import { ThemeContext } from "../../context/Theme-context";
+import { useContext } from "react";
 
 const ButtonStyled = styled.button({
   width: "15px",
@@ -15,6 +17,8 @@ const ButtonStyled = styled.button({
 });
 
 const Header = () => {
+  const { theme } = useContext(ThemeContext);
+  console.log(theme);
   return (
     <header>
       <div className={classes.rounded}>
