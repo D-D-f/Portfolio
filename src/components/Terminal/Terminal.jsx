@@ -8,8 +8,7 @@ import MsgError from "../MsgError/MsgError";
 import Help from "../Help/Help";
 
 const Terminal = () => {
-  const [history, setHistory] = useState([]);
-
+  const [history, setHistory] = useState([{ id: uuid(), value: "first" }]);
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
       if (
@@ -21,6 +20,8 @@ const Terminal = () => {
           ...current,
           { id: uuid(), value: event.target.value },
         ]);
+      } else if (event.target.value === "clear") {
+        setHistory([{ id: uuid(), value: "first" }]);
       } else {
         event.target.disabled = true;
         setHistory((current) => [
@@ -38,18 +39,22 @@ const Terminal = () => {
       return <Help key={id} />;
     } else if (command === "presentation") {
       return <Presentation key={id} />;
-    } else {
+    } else if (command !== "first") {
       return <MsgError key={id} />;
     }
   };
 
   const displayCommand = history.map((item, i) => {
-    return (
-      <React.Fragment key={i}>
-        {commandTerminal(item.value, item.id)}
-        <Fields handleKeyPress={handleKeyPress} />
-      </React.Fragment>
-    );
+    if (history.length === 1) {
+      return <Fields key={i} handleKeyPress={handleKeyPress} />;
+    } else {
+      return (
+        <React.Fragment key={i}>
+          {commandTerminal(item.value, item.id)}
+          <Fields handleKeyPress={handleKeyPress} />
+        </React.Fragment>
+      );
+    }
   });
 
   return (
@@ -63,10 +68,7 @@ const Terminal = () => {
         </li>
         <li>GITLENS</li>
       </ul>
-      <div className={classes.container_terminal}>
-        <Fields handleKeyPress={handleKeyPress} />
-        {displayCommand}
-      </div>
+      <div className={classes.container_terminal}>{displayCommand}</div>
       <div className={classes.notification}>
         <Notification message="Pour connaître les commandes du terminal tapez help puis appuyer sur la touche entrer" />
       </div>
