@@ -27,8 +27,6 @@ const Terminal = () => {
           ...current,
           {
             id: uuid(),
-            value:
-              "La commande n'existe pas. Taper help pour connaitre l'ensemble des commandes",
           },
         ]);
       }
