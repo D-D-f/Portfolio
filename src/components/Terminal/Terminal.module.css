@@ -18,7 +18,8 @@
   overflow: auto;
 }
 
-.Fields {
+.Fields,
+.thread {
   display: flex;
   font-family: "JetBrains Mono";
 }

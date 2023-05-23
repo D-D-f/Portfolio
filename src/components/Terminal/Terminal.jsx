@@ -1,60 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { v4 as uuid } from "uuid";
 import classes from "./Terminal.module.css";
 import Fields from "../Fields/Fields";
-import Presentation from "../Presentation/Presentation";
 import Notification from "../Notification/Notification";
-import MsgError from "../MsgError/MsgError";
-import Help from "../Help/Help";
 
 const Terminal = () => {
-  const [history, setHistory] = useState([{ id: uuid(), value: "first" }]);
+  const [history, setHistory] = useState([]);
+  const firstInput = useRef();
+
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
-      if (
-        event.target.value === "help" ||
-        event.target.value === "presentation"
-      ) {
-        event.target.disabled = true;
-        setHistory((current) => [
-          ...current,
-          { id: uuid(), value: event.target.value },
-        ]);
-      } else if (event.target.value === "clear") {
-        setHistory([{ id: uuid(), value: "first" }]);
-      } else {
-        event.target.disabled = true;
-        setHistory((current) => [
-          ...current,
-          {
-            id: uuid(),
-          },
-        ]);
-      }
+      event.target.disabled = true;
+      setHistory((current) => [
+        ...current,
+        { id: uuid(), value: event.target.value },
+      ]);
+    }
+    if (event.target.value === "clear") {
+      setHistory([]);
+      firstInput.current.disabled = false;
+      firstInput.current.value = "";
+      firstInput.current.focus();
     }
   };
 
-  const commandTerminal = (command, id) => {
-    if (command === "help") {
-      return <Help key={id} />;
-    } else if (command === "presentation") {
-      return <Presentation key={id} />;
-    } else if (command !== "first") {
-      return <MsgError key={id} />;
-    }
-  };
-
-  const displayCommand = history.map((item, i) => {
-    if (history.length === 1) {
-      return <Fields key={i} handleKeyPress={handleKeyPress} />;
-    } else {
-      return (
-        <React.Fragment key={i}>
-          {commandTerminal(item.value, item.id)}
-          <Fields handleKeyPress={handleKeyPress} />
-        </React.Fragment>
-      );
-    }
+  const historyTerminal = history.map((item, i) => {
+    return (
+      <React.Fragment key={i}>
+        {<Fields handleKeyPress={handleKeyPress} value={item.value} />}
+      </React.Fragment>
+    );
   });
 
   return (
@@ -68,7 +43,25 @@ const Terminal = () => {
         </li>
         <li>GITLENS</li>
       </ul>
-      <div className={classes.container_terminal}>{displayCommand}</div>
+      <div className={classes.container_terminal}>
+        <div className={classes.thread}>
+          <p>
+            <span style={{ color: "#05BFDB" }}>➜</span>{" "}
+            <span style={{ color: "#088395" }}>@user_david</span>
+            <span>-</span>
+            <span style={{ color: "#EA5455" }}>portfolio</span>
+            <span>:</span>
+          </p>
+          <input
+            className={classes.input}
+            type="text"
+            onKeyPress={handleKeyPress}
+            ref={firstInput}
+            autoFocus
+          />
+        </div>
+        {historyTerminal}
+      </div>
       <div className={classes.notification}>
         <Notification message="Pour connaître les commandes du terminal tapez help puis appuyer sur la touche entrer" />
       </div>
