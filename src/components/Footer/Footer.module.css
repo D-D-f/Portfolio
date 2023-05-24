@@ -1,0 +1,14 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  color: white;
+}
+
+.langage {
+  display: flex;
+}
+
+.marginR {
+  margin-right: 10px;
+}
