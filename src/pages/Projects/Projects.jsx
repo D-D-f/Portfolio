@@ -54,14 +54,14 @@ const Projects = () => {
       <div className={classes.filtreInput}>
         <span style={{ paddingRight: "5px", paddingLeft: "5px" }}>{">"}</span>
         <input type="text" onChange={(e) => getSearch(e)} placeholder="Find" />
-        <span style={{ fontSize: "10px" }}>
+        <span style={{ fontSize: "10px", marginLeft: "10px" }}>
           {newArrayFilter?.length === 0
             ? "No results"
             : `Projets trouvé : ${newArrayFilter?.length}`}
         </span>
       </div>
 
-      {displayProjects}
+      <div className={classes.projects}>{displayProjects}</div>
     </section>
   );
 };
