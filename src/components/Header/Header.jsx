@@ -20,7 +20,7 @@ const Header = () => {
       <div>
         <img
           style={{ height: "20px", width: "20px" }}
-          src="../public/assets/icon/vscode_icon.svg"
+          src="assets/icon/vscode_icon.svg"
           alt="icone vscode"
         />
       </div>
