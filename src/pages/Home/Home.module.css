@@ -20,7 +20,7 @@
 
 .allBtn a {
   text-decoration: none;
-  color: inherit;
+  color: var(--backgroundColor);
 }
 
 .allBtn > a:nth-child(1) {
