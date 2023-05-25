@@ -9,10 +9,10 @@ const AllRoutes = () => {
   return (
     <Routes>
       <Route path="/" exact element={<Home />} />
-      <Route path="*/about" exact element={<About />} />
-      <Route path="*/contact" exact element={<Contact />} />
-      <Route path="*/projects" exact element={<Projects />} />
-      <Route path="*/setting" exact element={<Setting />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/projects" element={<Projects />} />
+      <Route path="/setting" element={<Setting />} />
     </Routes>
   );
 };
