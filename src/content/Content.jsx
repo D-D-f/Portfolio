@@ -16,7 +16,7 @@ const Content = () => {
     ["--border"]: theme.border,
   };
   return (
-    <div className="App" style={{ ...theme }}>
+    <div className="App" style={{ ...themeStyle }}>
       <Header />
       <main className="container">
         <div className="explorer">

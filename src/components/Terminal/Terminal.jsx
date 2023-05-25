@@ -57,13 +57,14 @@ const Terminal = () => {
             type="text"
             onKeyPress={handleKeyPress}
             ref={firstInput}
+            placeholder="Taper help"
             autoFocus
           />
         </div>
         {historyTerminal}
       </div>
       <div className={classes.notification}>
-        <Notification message="Pour connaître les commandes du terminal tapez help puis appuyer sur la touche entrer" />
+        {/* <Notification message="Pour connaître les commandes du terminal tapez help puis appuyer sur la touche entrer" /> */}
       </div>
     </div>
   );
