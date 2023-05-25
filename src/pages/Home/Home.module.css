@@ -18,6 +18,11 @@
   margin-top: 1rem;
 }
 
+.allBtn a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .allBtn > a:nth-child(1) {
   margin-right: 1rem;
 }
@@ -27,6 +32,7 @@
   border-radius: 10px;
   border: none;
   background-color: var(--border);
+  color: inherit;
 }
 
 @media screen and (max-width: 710px) {
