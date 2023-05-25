@@ -7,31 +7,36 @@
       ],
       "title": "Portfolio Sophie Bruel",
       "langage": ["javascript", "html5", "css3"],
-      "github": "https://github.com/D-D-f/porfolio_sophie_bruel"
+      "github": "https://github.com/D-D-f/porfolio_sophie_bruel",
+      "link": ""
     },
     {
       "img": "",
       "title": "Blog",
       "langage": ["html5", "css3", "php"],
-      "github": "https://github.com/D-D-f/Blog"
+      "github": "https://github.com/D-D-f/Blog",
+      "link": ""
     },
     {
       "img": "",
       "title": "Argent Bank",
       "langage": ["react js", "css3"],
-      "github": "https://github.com/D-D-f/argentBank"
+      "github": "https://github.com/D-D-f/argentBank",
+      "link": ""
     },
     {
       "img": "",
       "title": "Pendu Pokemon",
       "langage": ["html5", "css3", "javascript"],
-      "github": "https://github.com/D-D-f/pendu_pokemon"
+      "github": "https://github.com/D-D-f/pendu_pokemon",
+      "link": "https://d-d-f.github.io/pendu_pokemon/"
     },
     {
       "img": "",
       "title": "Kasa",
       "langage": ["react js", "css3"],
-      "github": "https://github.com/D-D-f/kasa"
+      "github": "https://github.com/D-D-f/kasa",
+      "link": ""
     }
   ]
 }

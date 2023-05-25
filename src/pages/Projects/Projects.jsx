@@ -45,6 +45,7 @@ const Projects = () => {
         title={item.title}
         langage={item.langage}
         github={item.github}
+        link={item.link}
       />
     );
   });

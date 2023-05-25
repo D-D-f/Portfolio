@@ -1,7 +1,7 @@
 import Badge from "../Badge/Badge";
 import classes from "./Card.module.css";
 
-const Card = ({ img, title, langage, github }) => {
+const Card = ({ img, title, langage, github, link }) => {
   const allLangages = langage?.map((code, id) => {
     return <Badge key={id} langage={code} />;
   });
@@ -18,7 +18,7 @@ const Card = ({ img, title, langage, github }) => {
           <a className={classes.link_github} href={github}>
             <img src="./assets/icon/github_icon.svg" alt="logo github" />
           </a>
-          <a className={classes.link_github} href="">
+          <a className={classes.link_github} href={link}>
             <img
               className={classes.link_link}
               src="./assets/icon/link_icon.svg"
