@@ -28,3 +28,13 @@
   border: none;
   background-color: var(--border);
 }
+
+@media screen and (max-width: 710px) {
+  .home {
+    font-size: 1rem;
+  }
+  .allBtn > a > button {
+    padding: 15px;
+    font-size: 0.8rem;
+  }
+}
