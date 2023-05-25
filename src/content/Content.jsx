@@ -10,7 +10,11 @@ import { useContext } from "react";
 
 const Content = () => {
   const { theme } = useContext(ThemeContext);
-  console.log(theme);
+  const themeStyle = {
+    ["--backgroundColor"]: theme.background,
+    ["--color"]: theme.color,
+    ["--border"]: theme.border,
+  };
   return (
     <div className="App" style={{ ...theme }}>
       <Header />
