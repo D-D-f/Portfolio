@@ -31,4 +31,9 @@ input {
   .projects::-webkit-scrollbar {
     background-color: inherit;
   }
+  .containerCard {
+    border: 1px solid red;
+    padding: 0;
+    height: 90vh;
+  }
 }
