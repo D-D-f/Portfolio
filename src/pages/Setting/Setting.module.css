@@ -23,3 +23,15 @@
   border-radius: 10px;
   cursor: pointer;
 }
+
+@media screen and (max-width: 710px) {
+  h3 {
+    text-align: center;
+  }
+  .containerTheme {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+  }
+}

@@ -7,7 +7,7 @@ const Setting = () => {
 
   return (
     <section className={classes.section}>
-      <h1>Choix du thème</h1>
+      <h3>Choix du thème</h3>
       <div className={classes.containerTheme}>
         <div className={classes.theme}>
           <img
