@@ -7,22 +7,27 @@
   list-style: none;
 }
 
-.nav_main ul li {
+.nav_main ul a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav_main ul a li {
   padding: 3px 40px;
 }
 
-.nav_main ul li a {
+.nav_main ul a li {
   display: flex;
   align-items: center;
   gap: 5px;
 }
 
-.nav_main ul li a img {
+.nav_main ul a li img {
   width: 20px;
   height: 20px;
 }
 
-.nav_main ul li:hover {
+.nav_main ul a li:hover {
   cursor: pointer;
 }
 

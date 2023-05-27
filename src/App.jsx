@@ -1,12 +1,15 @@
 import "./App.css";
 import ThemeContextProvider from "./context/Theme-context";
+import PageContextProvider from "./context/Page-context";
 import Content from "./content/Content";
 
 const App = () => {
   return (
     <>
       <ThemeContextProvider>
-        <Content />
+        <PageContextProvider>
+          <Content />
+        </PageContextProvider>
       </ThemeContextProvider>
     </>
   );

@@ -9,6 +9,16 @@
   src: url("./ttf/JetBrainsMono-Regular.ttf");
 }
 
+@font-face {
+  font-family: "fontSpring";
+  src: url("./ttf/Fontspring-DEMO-neuesingular-h-regular.otf");
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url("./ttf/Roboto-Regular.ttf");
+}
+
 html,
 body,
 #root,
@@ -18,6 +28,7 @@ body,
 }
 .container {
   display: flex;
+  overflow: hidden;
 }
 
 .App {
@@ -28,6 +39,7 @@ body,
   background-color: var(--backgroundColor);
   color: var(--color);
   border: var(--border);
+  font-family: "roboto";
 }
 
 .explorer {
@@ -60,11 +72,13 @@ li a {
 section {
   height: 100%;
   font-family: "JetBrains Mono";
-  overflow: auto;
 }
 
 @media screen and (max-width: 910px) {
   section {
     justify-content: center;
+  }
+  .container_pages {
+    height: 100%;
   }
 }

@@ -13,7 +13,7 @@ const Footer = () => {
         </div>
       </div>
       <div className={classes.langage}>
-        <div className={classes.marginR}>{`{} JavaScript JSX`}</div>
+        <div className={classes.marginR}>{`{ } JavaScript JSX`}</div>
         <div className={classes.marginR}>
           <FontAwesomeIcon icon="fa-solid fa-check" /> Prettier
         </div>

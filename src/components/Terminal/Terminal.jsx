@@ -38,7 +38,7 @@ const Terminal = () => {
         <li>PROBLEMS</li>
         <li>OUTPUT</li>
         <li>DEBUG CONSOLE</li>
-        <li style={{ borderBottom: "1px solid red", paddingBottom: "5px" }}>
+        <li className={classes.liBorder} style={{ paddingBottom: "5px" }}>
           TERMINAL
         </li>
         <li>GITLENS</li>

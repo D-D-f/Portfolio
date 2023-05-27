@@ -1,6 +1,13 @@
 .containerCard {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
+  overflow-y: auto;
+  scrollbar-width: 10px;
+  scrollbar-color: var(--border);
+  width: 90%;
+  height: max-content;
+  padding: 50px 0px;
 }
 
 .filtreInput {
@@ -18,21 +25,24 @@ input {
 .projects {
   margin-top: 20px;
   display: flex;
-  flex-wrap: wrap;
   gap: 20px;
 }
 
 @media screen and (max-width: 640px) {
   .projects {
+    flex-direction: column;
     justify-content: center;
-    height: 80%;
-    overflow-y: auto;
+    align-items: center;
+    height: 100%;
+    width: 100%;
   }
   .projects::-webkit-scrollbar {
     background-color: inherit;
   }
   .containerCard {
     padding: 0;
-    height: 70vh;
+    height: 80%;
+
+    width: 100%;
   }
 }

@@ -1,8 +1,11 @@
 import classes from "./Home.module.css";
 import { Link } from "react-router-dom";
 import { Typewriter } from "react-simple-typewriter";
+import { PageContext } from "../../context/Page-context";
+import { useContext } from "react";
 
 const Home = () => {
+  const { changePage } = useContext(PageContext);
   return (
     <section
       className={`${classes.home} flex directionColumn justifyContentCenter alignItemsCenter`}
@@ -25,10 +28,10 @@ const Home = () => {
         </p>
       </div>
       <div className={classes.allBtn}>
-        <Link to="/projects">
+        <Link onClick={() => changePage("projects")} to="/projects">
           <button>Voir mon travail</button>
         </Link>
-        <Link to="/contact">
+        <Link onClick={() => changePage("contact")} to="/contact">
           <button>Me contacter</button>
         </Link>
       </div>

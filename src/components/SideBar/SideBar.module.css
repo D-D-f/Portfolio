@@ -3,9 +3,12 @@
 .aside_sideBar {
   display: flex;
   flex-direction: column;
-  padding: 5px;
 }
 
 .aside {
   justify-content: space-between;
+}
+
+.a {
+  margin-left: 10px;
 }

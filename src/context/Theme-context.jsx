@@ -6,9 +6,9 @@ export const ThemeContext = createContext();
 const ThemeContextProvider = (props) => {
   const allThemes = {
     ayu: {
-      background: "#212733",
-      color: "#B3B454",
-      border: "#FFCF9D",
+      background: "#0a0e14",
+      color: "#efefef",
+      border: "#e6b450",
     },
     dracula: {
       background: "#282a36",
@@ -22,10 +22,15 @@ const ThemeContextProvider = (props) => {
     },
   };
 
-  const [theme, setTheme] = useState(allThemes.ayu);
+  const getTheme = localStorage.getItem("theme")
+    ? allThemes[localStorage.getItem("theme")]
+    : allThemes.ayu;
+
+  const [theme, setTheme] = useState(getTheme);
 
   const changeTheme = (value) => {
     setTheme(allThemes[value]);
+    localStorage.setItem("theme", value);
   };
 
   return (

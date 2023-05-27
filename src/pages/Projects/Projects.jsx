@@ -51,7 +51,7 @@ const Projects = () => {
   });
 
   return (
-    <section className={classes.containerCard}>
+    <>
       <div className={classes.filtreInput}>
         <span style={{ paddingRight: "5px", paddingLeft: "5px" }}>{">"}</span>
         <input type="text" onChange={(e) => getSearch(e)} placeholder="Find" />
@@ -61,9 +61,10 @@ const Projects = () => {
             : `Projets trouvé : ${newArrayFilter?.length}`}
         </span>
       </div>
-
-      <div className={classes.projects}>{displayProjects}</div>
-    </section>
+      <section className={classes.containerCard}>
+        <div className={classes.projects}>{displayProjects}</div>
+      </section>
+    </>
   );
 };
 

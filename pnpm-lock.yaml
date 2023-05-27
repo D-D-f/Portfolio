@@ -1,4 +1,4 @@
-lockfileVersion: 5.4
+lockfileVersion: 5.3
 
 specifiers:
   '@fortawesome/fontawesome-svg-core': ^6.4.0
@@ -21,15 +21,15 @@ specifiers:
 dependencies:
   '@fortawesome/fontawesome-svg-core': 6.4.0
   '@fortawesome/free-solid-svg-icons': 6.4.0
-  '@fortawesome/react-fontawesome': 0.2.0_tumfstpptabomqiydababgzl3q
+  '@fortawesome/react-fontawesome': 0.2.0_9d18594def9802e641181802009b2bdc
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-hook-form: 7.43.9_react@18.2.0
   react-icons: 4.8.0_react@18.2.0
-  react-router-dom: 6.10.0_biqbaboplfbrettd7655fr4n2y
-  react-simple-typewriter: 5.0.1_biqbaboplfbrettd7655fr4n2y
-  styled-components: 5.3.9_biqbaboplfbrettd7655fr4n2y
-  typewriter-effect: 2.19.0_biqbaboplfbrettd7655fr4n2y
+  react-router-dom: 6.10.0_react-dom@18.2.0+react@18.2.0
+  react-simple-typewriter: 5.0.1_react-dom@18.2.0+react@18.2.0
+  styled-components: 5.3.9_react-dom@18.2.0+react@18.2.0
+  typewriter-effect: 2.19.0_react-dom@18.2.0+react@18.2.0
   uuid: 9.0.0
 
 devDependencies:
@@ -518,7 +518,7 @@ packages:
       '@fortawesome/fontawesome-common-types': 6.4.0
     dev: false
 
-  /@fortawesome/react-fontawesome/0.2.0_tumfstpptabomqiydababgzl3q:
+  /@fortawesome/react-fontawesome/0.2.0_9d18594def9802e641181802009b2bdc:
     resolution: {integrity: sha512-uHg75Rb/XORTtVt7OS9WoK8uM276Ufi7gCzshVWkUJbHhh3svsUUeqXerrM96Wm7fRiDzfKRwSoahhMIkGAYHw==}
     peerDependencies:
       '@fortawesome/fontawesome-svg-core': ~1 || ~6
@@ -621,7 +621,7 @@ packages:
       babel-plugin-syntax-jsx: 6.18.0
       lodash: 4.17.21
       picomatch: 2.3.1
-      styled-components: 5.3.9_biqbaboplfbrettd7655fr4n2y
+      styled-components: 5.3.9_react-dom@18.2.0+react@18.2.0
     dev: false
 
   /babel-plugin-syntax-jsx/6.18.0:
@@ -932,7 +932,7 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /react-router-dom/6.10.0_biqbaboplfbrettd7655fr4n2y:
+  /react-router-dom/6.10.0_react-dom@18.2.0+react@18.2.0:
     resolution: {integrity: sha512-E5dfxRPuXKJqzwSe/qGcqdwa18QiWC6f3H3cWXM24qj4N0/beCIf/CWTipop2xm7mR0RCS99NnaqPNjHtrAzCg==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -955,7 +955,7 @@ packages:
       react: 18.2.0
     dev: false
 
-  /react-simple-typewriter/5.0.1_biqbaboplfbrettd7655fr4n2y:
+  /react-simple-typewriter/5.0.1_react-dom@18.2.0+react@18.2.0:
     resolution: {integrity: sha512-vA5HkABwJKL/DJ4RshSlY/igdr+FiVY4MLsSQYJX6FZG/f1/VwN4y1i3mPXRyfaswrvI8xii1kOVe1dYtO2Row==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -1010,7 +1010,7 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /styled-components/5.3.9_biqbaboplfbrettd7655fr4n2y:
+  /styled-components/5.3.9_react-dom@18.2.0+react@18.2.0:
     resolution: {integrity: sha512-Aj3kb13B75DQBo2oRwRa/APdB5rSmwUfN5exyarpX+x/tlM/rwZA2vVk2vQgVSP6WKaZJHWwiFrzgHt+CLtB4A==}
     engines: {node: '>=10'}
     peerDependencies:
@@ -1047,7 +1047,7 @@ packages:
     resolution: {integrity: sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog==}
     engines: {node: '>=4'}
 
-  /typewriter-effect/2.19.0_biqbaboplfbrettd7655fr4n2y:
+  /typewriter-effect/2.19.0_react-dom@18.2.0+react@18.2.0:
     resolution: {integrity: sha512-rhUX1ukmAXNFWUnMFx8CDU1uLWJQ7pRYzDU7WfHJRq43i6SmWSP9vFiUsOGfXINodUAgZiJ5xnzwLciHxZDGDg==}
     peerDependencies:
       react: ^17.x || ^18.x

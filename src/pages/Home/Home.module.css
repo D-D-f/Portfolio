@@ -18,6 +18,10 @@
   margin-top: 1rem;
 }
 
+.allBtn button {
+  cursor: pointer;
+}
+
 .allBtn a {
   text-decoration: none;
   color: var(--backgroundColor);
