@@ -6,7 +6,7 @@ const Contact = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <section>
+    <section className={classes.section}>
       <ul>
         <li>.socials {"{"} </li>
         <ul className={classes.ul_contact}>

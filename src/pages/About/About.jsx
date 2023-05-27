@@ -1,6 +1,8 @@
+import classes from "./About.module.css";
+
 const About = () => {
   return (
-    <section>
+    <section className={classes.section}>
       <p>
         const <span style={{ color: " var(--border)" }}>myStack</span> =
         ['javascript', 'php', 'react', 'html', 'css3'];
