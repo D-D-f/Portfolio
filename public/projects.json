@@ -33,10 +33,10 @@
     },
     {
       "img": "",
-      "title": "Kasa",
+      "title": "Portfolio VSCode",
       "langage": ["react js", "css3"],
-      "github": "https://github.com/D-D-f/kasa",
-      "link": ""
+      "github": "https://github.com/D-D-f/Portfolio",
+      "link": "https://david-defreitas-portfolio.netlify.app/"
     }
   ]
 }
