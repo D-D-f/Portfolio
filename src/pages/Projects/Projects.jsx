@@ -54,7 +54,11 @@ const Projects = () => {
     <>
       <div className={classes.filtreInput}>
         <span style={{ paddingRight: "5px", paddingLeft: "5px" }}>{">"}</span>
-        <input type="text" onChange={(e) => getSearch(e)} placeholder="Find" />
+        <input
+          type="text"
+          onChange={(e) => getSearch(e)}
+          placeholder="Recherche par langage"
+        />
         <span style={{ fontSize: "10px", marginLeft: "10px" }}>
           {newArrayFilter?.length === 0
             ? "No results"
