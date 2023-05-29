@@ -2,7 +2,6 @@ import React, { useState, useRef } from "react";
 import { v4 as uuid } from "uuid";
 import classes from "./Terminal.module.css";
 import Fields from "../Fields/Fields";
-import Notification from "../Notification/Notification";
 
 const Terminal = () => {
   const [history, setHistory] = useState([]);

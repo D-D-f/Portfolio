@@ -3,16 +3,62 @@
   flex-wrap: wrap;
   flex-direction: column;
   overflow-y: auto;
-  scrollbar-width: 10px;
-  scrollbar-color: var(--border);
-  width: 90%;
+  scrollbar-color: var(--border) var(--backgroundColor);
+  width: 88%;
   height: max-content;
   padding: 50px 0px;
 }
 
 .filtreInput {
-  width: max-content;
+  width: 88%;
+  display: flex;
+  justify-content: center;
   height: max-content;
+  margin-top: 10px;
+}
+
+/* Global */
+.containerCard::-webkit-scrollbar {
+  width: 6px;
+}
+/* Fond */
+.containerCard::-webkit-scrollbar-track {
+  position: relative;
+  box-shadow: inset -5px 0 0 1px var(--backgroundColor),
+    inset -9px 0 0 1px var(--border);
+}
+/* Ascenseur */
+.containerCard::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 2px;
+}
+/*Angle*/
+.containerCard::-webkit-scrollbar-corner {
+  background: var(--border);
+}
+
+/* Boutons */
+.containerCard::-webkit-scrollbar-button:single-button {
+  display: block;
+  border-style: solid;
+  height: 20px;
+  width: 16px;
+}
+/* Haut */
+.containerCard::-webkit-scrollbar-button:single-button:vertical:decrement {
+  border-width: 0 8px 12px 8px;
+  border-color: transparent transparent transparent transparent;
+}
+.containerCard::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+  border-color: transparent transparent transparent transparent;
+}
+/* Bas */
+.containerCard::-webkit-scrollbar-button:single-button:vertical:increment {
+  border-width: 12px 8px 0 8px;
+  border-color: var(--border) transparent transparent transparent;
+}
+.containerCard::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+  border-color: var(--border) transparent transparent transparent;
 }
 
 input {
