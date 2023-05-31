@@ -1,28 +1,33 @@
+import React, { useState, useEffect } from "react";
 import Card from "../../components/Card/Card";
 import classes from "./Projects.module.css";
-import { useState, useEffect } from "react";
 
 const Projects = () => {
   const [search, setSearch] = useState("");
   const [projects, setProjects] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const abortController = new AbortController();
+
     const getProjects = async () => {
       try {
-        const getData = await fetch("./projects.json", {
+        const response = await fetch("./projects.json", {
           method: "GET",
           signal: abortController.signal,
         });
 
-        if (getData) {
-          const data = await getData.json();
+        if (response.ok) {
+          const data = await response.json();
           setProjects(data);
+          setIsLoading(false);
         }
-      } catch (e) {
-        console.log(e);
+      } catch (error) {
+        console.log(error);
+        setIsLoading(false);
       }
     };
+
     getProjects();
 
     return () => {
@@ -30,49 +35,49 @@ const Projects = () => {
     };
   }, []);
 
-  const getSearch = (e) => {
+  const handleSearch = (e) => {
     setSearch(e.currentTarget.value);
   };
 
-  const filterObject = (valueUser) => {
-    return projects?.projects?.filter((objet) => {
-      return objet.langage.some((mot) => {
-        return mot.startsWith(valueUser.toLowerCase());
-      });
+  const filterProjects = () => {
+    return projects?.projects?.filter((project) => {
+      return project.langage.some((language) =>
+        language.startsWith(search.toLowerCase())
+      );
     });
   };
 
-  const newArrayFilter = filterObject(search);
-  const displayProjects = newArrayFilter?.map((item, id) => {
-    return (
-      <Card
-        key={id}
-        img={item.img}
-        title={item.title}
-        langage={item.langage}
-        github={item.github}
-        link={item.link}
-      />
-    );
-  });
+  const filteredProjects = filterProjects();
+  const displayProjects = filteredProjects?.map((project, id) => (
+    <Card
+      key={id}
+      img={project.img}
+      title={project.title}
+      langage={project.langage}
+      github={project.github}
+      link={project.link}
+    />
+  ));
 
   return (
     <>
-      <div className={classes.filtreInput}>
+      <div className={classes.filterInput}>
         <span style={{ paddingRight: "5px", paddingLeft: "5px" }}>{">"}</span>
         <input
           type="text"
-          onChange={(e) => getSearch(e)}
+          onChange={(e) => handleSearch(e)}
           placeholder="Recherche par langage"
         />
         <span style={{ fontSize: "10px", marginLeft: "10px" }}>
-          {newArrayFilter?.length === 0
-            ? "No results"
-            : `Projets trouvé : ${newArrayFilter?.length}`}
+          {filteredProjects?.length === 0
+            ? "Aucun résultat"
+            : `Projets trouvés : ${filteredProjects?.length}`}
         </span>
       </div>
       <section className={classes.containerCard}>
-        <div className={classes.projects}>{displayProjects}</div>
+        <div className={classes.projects}>
+          {isLoading ? <div>Chargement en cours...</div> : displayProjects}
+        </div>
       </section>
     </>
   );
