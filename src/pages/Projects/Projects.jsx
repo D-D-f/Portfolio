@@ -7,10 +7,12 @@ const Projects = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
+    const abortController = new AbortController();
     const getProjects = async () => {
       try {
         const getData = await fetch("./projects.json", {
           method: "GET",
+          signal: abortController.signal,
         });
 
         if (getData) {
@@ -22,6 +24,10 @@ const Projects = () => {
       }
     };
     getProjects();
+
+    return () => {
+      abortController.abort();
+    };
   }, []);
 
   const getSearch = (e) => {
