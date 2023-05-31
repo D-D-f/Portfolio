@@ -62,7 +62,16 @@ const Projects = () => {
   return (
     <>
       {isLoading ? (
-        <div>Chargement en cours...</div>
+        <div
+          style={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          Chargement en cours...
+        </div>
       ) : (
         <>
           <div className={classes.filtreInput}>
