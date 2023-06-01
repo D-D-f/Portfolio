@@ -8,6 +8,7 @@ Ce portfolio a été créé dans le but de présenter mes compétences et mes pr
 * HTML5
 * CSS3
 * React JS
+
 Le portfolio est hébergé sur Netlify à l'adresse suivante : https://david-defreitas-portfolio.netlify.app.
 
 ## Fonctionnalités
