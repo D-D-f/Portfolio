@@ -1,7 +1,7 @@
 import Card from "../../components/Card/Card";
 import classes from "./Projects.module.css";
 import useSWR from "swr";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const fetcher = async (url) => {
   const response = await fetch(url);
