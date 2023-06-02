@@ -45,7 +45,11 @@ const Projects = () => {
     );
   });
 
+<<<<<<< HEAD
   if (isLoading) return <div style={{ color: "red" }}>loading...</div>;
+=======
+  if (isLoading) return <div>loading...</div>;
+>>>>>>> origin/main
   if (isError) return <div>failed to load</div>;
 
   return (
