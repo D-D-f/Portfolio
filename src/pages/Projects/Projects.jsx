@@ -1,44 +1,30 @@
 import Card from "../../components/Card/Card";
 import classes from "./Projects.module.css";
-import { useState, useEffect } from "react";
+import useSWR from "swr";
+import { useState } from "react";
+
+const fetcher = async (url) => {
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error("Erreur lors de la récupération des données");
+  }
+  return response.json();
+};
 
 const Projects = () => {
   const [search, setSearch] = useState("");
-  const [projects, setProjects] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    const abortController = new AbortController();
-    const getProjects = async () => {
-      try {
-        const getData = await fetch("./projects.json", {
-          method: "GET",
-          signal: abortController.signal,
-        });
-
-        if (getData) {
-          const data = await getData.json();
-          setProjects(data);
-          setIsLoading(false);
-        }
-      } catch (e) {
-        console.log(e);
-        setIsLoading(false);
-      }
-    };
-    getProjects();
-
-    return () => {
-      abortController.abort();
-    };
-  }, []);
+  const { data, error, isLoading, isError } = useSWR(
+    "./projects.json",
+    fetcher
+  );
 
   const getSearch = (e) => {
     setSearch(e.currentTarget.value);
   };
 
   const filterObject = (valueUser) => {
-    return projects?.projects?.filter((objet) => {
+    return data?.projects?.filter((objet) => {
       return objet.langage.some((mot) => {
         return mot.startsWith(valueUser.toLowerCase());
       });
@@ -59,42 +45,27 @@ const Projects = () => {
     );
   });
 
+  if (isLoading) return <div>loading...</div>;
+  if (isError) return <div>failed to load</div>;
+
   return (
     <>
-      {isLoading ? (
-        <div
-          style={{
-            width: "100%",
-            height: "100%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          Chargement en cours...
-        </div>
-      ) : (
-        <>
-          <div className={classes.filtreInput}>
-            <span style={{ paddingRight: "5px", paddingLeft: "5px" }}>
-              {">"}
-            </span>
-            <input
-              type="text"
-              onChange={(e) => getSearch(e)}
-              placeholder="Recherche par langage"
-            />
-            <span style={{ fontSize: "10px", marginLeft: "10px" }}>
-              {newArrayFilter?.length === 0
-                ? "No results"
-                : `Projets trouvé : ${newArrayFilter?.length}`}
-            </span>
-          </div>
-          <section className={classes.containerCard}>
-            <div className={classes.projects}>{displayProjects}</div>
-          </section>
-        </>
-      )}
+      <div className={classes.filtreInput}>
+        <span style={{ paddingRight: "5px", paddingLeft: "5px" }}>{">"}</span>
+        <input
+          type="text"
+          onChange={(e) => getSearch(e)}
+          placeholder="Recherche par langage"
+        />
+        <span style={{ fontSize: "10px", marginLeft: "10px" }}>
+          {newArrayFilter?.length === 0
+            ? "No results"
+            : `Projets trouvé : ${newArrayFilter?.length}`}
+        </span>
+      </div>
+      <section className={classes.containerCard}>
+        <div className={classes.projects}>{displayProjects}</div>
+      </section>
     </>
   );
 };
