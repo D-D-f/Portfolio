@@ -1,20 +1,19 @@
 import { useState } from "react";
+import { useEffect } from "react";
 import { createContext } from "react";
+import { useLocation } from "react-router-dom";
 
 export const PageContext = createContext();
 const PageContextProvider = (props) => {
-  const getPage = localStorage.getItem("page")
-    ? localStorage.getItem("page")
-    : "home";
-  const [page, setPage] = useState(getPage);
+  const location = useLocation();
+  const [page, setPage] = useState(location.pathname);
 
-  const changePage = (value) => {
-    setPage(value);
-    localStorage.setItem("page", value);
-  };
+  useEffect(() => {
+    setPage(location.pathname);
+  });
 
   return (
-    <PageContext.Provider value={{ changePage, page }}>
+    <PageContext.Provider value={{ page }}>
       {props.children}
     </PageContext.Provider>
   );

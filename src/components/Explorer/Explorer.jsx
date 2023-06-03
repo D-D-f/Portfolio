@@ -1,14 +1,12 @@
 import classes from "./Explorer.module.css";
 import { Link } from "react-router-dom";
-import { PageContext } from "../../context/Page-context";
 import { useContext } from "react";
 const Explorer = () => {
-  const { changePage } = useContext(PageContext);
   return (
     <nav className={classes.nav}>
       <p>EXPLORER</p>
       <ul className={classes.navPage}>
-        <li onClick={() => changePage("home")}>
+        <li>
           <Link to="/">
             <img
               className={classes.icon}
@@ -18,7 +16,7 @@ const Explorer = () => {
             home.jsx
           </Link>
         </li>
-        <li onClick={() => changePage("about")}>
+        <li>
           <Link to="/about">
             <img
               className={classes.icon}
@@ -28,7 +26,7 @@ const Explorer = () => {
             about.html
           </Link>
         </li>
-        <li onClick={() => changePage("contact")}>
+        <li>
           <Link to="/contact">
             <img
               className={classes.icon}
@@ -38,7 +36,7 @@ const Explorer = () => {
             contact.css
           </Link>
         </li>
-        <li onClick={() => changePage("projects")}>
+        <li>
           <Link to="/projects">
             <img
               className={classes.icon}

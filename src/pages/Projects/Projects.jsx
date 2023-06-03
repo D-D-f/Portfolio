@@ -1,7 +1,7 @@
 import Card from "../../components/Card/Card";
 import classes from "./Projects.module.css";
 import useSWR from "swr";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const fetcher = async (url) => {
   const response = await fetch(url);
@@ -13,13 +13,11 @@ const fetcher = async (url) => {
 
 const Projects = () => {
   const [search, setSearch] = useState("");
-  const [projects, setProjects] = useState([]);
 
   const { data, error, isLoading, isError } = useSWR(
     "./projects.json",
     fetcher
   );
-  console.log(error);
 
   const getSearch = (e) => {
     setSearch(e.currentTarget.value);

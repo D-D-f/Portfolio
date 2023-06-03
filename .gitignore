@@ -1,0 +1,31 @@
+# Fichiers de configuration
+*.ini
+
+# Fichiers de compilation
+*.o
+*.so
+*.dll
+
+# Fichiers temporaires
+*.tmp
+*.swp
+*.bak
+
+# Dossiers de dépendances
+node_modules/
+vendor/
+
+# Fichiers de logs
+logs/
+*.log
+
+# Fichiers générés
+dist/
+build/
+
+# Fichiers spécifiques à l'IDE
+.idea/
+.vscode/
+*.suo
+*.user
+*.sln.docstates

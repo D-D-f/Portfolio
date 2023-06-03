@@ -5,18 +5,16 @@ import { PageContext } from "../../context/Page-context";
 import { useContext } from "react";
 
 const Nav = () => {
-  const { changePage, page } = useContext(PageContext);
+  const { page } = useContext(PageContext);
   const { theme } = useContext(ThemeContext);
-
   return (
     <nav className={classes.nav_main}>
       <ul>
         <Link to="/">
           <li
             style={{
-              borderTop: page === "home" ? `1px solid ${theme.border}` : "",
+              borderTop: page === "/" ? `1px solid ${theme.border}` : "",
             }}
-            onClick={() => changePage("home")}
           >
             <img
               className={classes.icon}
@@ -29,9 +27,8 @@ const Nav = () => {
         <Link to="/about">
           <li
             style={{
-              borderTop: page === "about" ? `1px solid ${theme.border}` : "",
+              borderTop: page === "/about" ? `1px solid ${theme.border}` : "",
             }}
-            onClick={() => changePage("about")}
           >
             <img
               className={classes.icon}
@@ -44,9 +41,8 @@ const Nav = () => {
         <Link to="/contact">
           <li
             style={{
-              borderTop: page === "contact" ? `1px solid ${theme.border}` : "",
+              borderTop: page === "/contact" ? `1px solid ${theme.border}` : "",
             }}
-            onClick={() => changePage("contact")}
           >
             <img
               className={classes.icon}
@@ -59,9 +55,9 @@ const Nav = () => {
         <Link to="/projects">
           <li
             style={{
-              borderTop: page === "projects" ? `1px solid ${theme.border}` : "",
+              borderTop:
+                page === "/projects" ? `1px solid ${theme.border}` : "",
             }}
-            onClick={() => changePage("projects")}
           >
             <img
               className={classes.icon}
