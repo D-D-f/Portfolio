@@ -29,6 +29,7 @@ dependencies:
   react-dom: 18.2.0_react@18.2.0
   react-hook-form: 7.43.9_react@18.2.0
   react-icons: 4.8.0_react@18.2.0
+<<<<<<< HEAD
   react-is: 16.13.1
   react-router-dom: 6.10.0_react-dom@18.2.0+react@18.2.0
   react-simple-typewriter: 5.0.1_react-dom@18.2.0+react@18.2.0
@@ -36,6 +37,13 @@ dependencies:
   swr: 2.1.5_react@18.2.0
   typewriter-effect: 2.19.0_react-dom@18.2.0+react@18.2.0
   unfetch: 5.0.0
+=======
+  react-router-dom: 6.10.0_biqbaboplfbrettd7655fr4n2y
+  react-simple-typewriter: 5.0.1_biqbaboplfbrettd7655fr4n2y
+  styled-components: 5.3.9_biqbaboplfbrettd7655fr4n2y
+  swr: 2.1.5_react@18.2.0
+  typewriter-effect: 2.19.0_biqbaboplfbrettd7655fr4n2y
+>>>>>>> 17aa5756bbe7c4bce8a554602b2e9bcbdbb0fc56
   uuid: 9.0.0
 
 devDependencies:
