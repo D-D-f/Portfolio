@@ -7,6 +7,7 @@
       ],
       "title": "Portfolio Sophie Bruel",
       "langage": ["javascript", "html5", "css3"],
+      "description": "Réalisation d'un portfolio avec un compte utilisateur pour ajouter ou supprimer des projets",
       "github": "https://github.com/D-D-f/porfolio_sophie_bruel",
       "link": ""
     },
@@ -14,6 +15,7 @@
       "img": "",
       "title": "Blog",
       "langage": ["html5", "css3", "php"],
+      "description": "Réalisation d'un blog, avec espace utilisateur, on peut laisser des commentaires sur chaque articles",
       "github": "https://github.com/D-D-f/Blog",
       "link": ""
     },
@@ -21,6 +23,7 @@
       "img": "",
       "title": "Argent Bank",
       "langage": ["react js", "css3"],
+      "description": "Réalisation d'une page de banque avec compte utilisateur pour se connecter sur son compte",
       "github": "https://github.com/D-D-f/argentBank",
       "link": ""
     },
@@ -28,6 +31,7 @@
       "img": "",
       "title": "Pendu Pokemon",
       "langage": ["html5", "css3", "javascript"],
+      "description": "Reproduction du jeu pendu avec comme thème pokemon",
       "github": "https://github.com/D-D-f/pendu_pokemon",
       "link": "https://d-d-f.github.io/pendu_pokemon/"
     },
@@ -35,6 +39,7 @@
       "img": "",
       "title": "Portfolio VSCode",
       "langage": ["react js", "css3"],
+      "description": "Portfolio avec comme thème l'ide VSCODE",
       "github": "https://github.com/D-D-f/Portfolio",
       "link": "https://david-defreitas-portfolio.netlify.app/"
     }
