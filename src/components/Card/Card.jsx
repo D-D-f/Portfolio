@@ -14,10 +14,14 @@ const Card = ({ img, title, langage, github, link, description }) => {
       />
       <div className={classes.txt}>
         <h2>{title}</h2>
-        <p>{description}</p>
+        <p className={classes.description}>{description}</p>
         <div className={classes.link}>
           <a className={classes.link_github} href={github}>
-            <img src="./assets/icon/github_icon.svg" alt="logo github" />
+            <img
+              style={{ width: "15px", height: "15px", marginRight: "15px" }}
+              src="./assets/icon/github_icon.svg"
+              alt="logo github"
+            />
           </a>
           <a className={classes.link_github} href={link}>
             <img
